@@ -12,12 +12,6 @@
 # It contains GOPATH, some functions, aliases etc...
 [ -r ~/.bash_private ] && source ~/.bash_private
 
-# On Mac OS X: brew install bash-completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-
 # Get it from the original Git repo: 
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 if [ -f ~/.git-prompt.sh ]; then
@@ -41,8 +35,8 @@ alias t="tig status"
 alias tigs="tig status" #old habits don't die
 alias d='git diff' 
 
-alias vi='nvim'
-alias vim='nvim'
+#alias vi='nvim'
+#alias vim='nvim'
 # alias vi='vim'
  
 #################
@@ -77,6 +71,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 # -- Prompt
 
+B
 # If we don't use the below git master one, use this simple
 # PS1="\[$(tput setaf 6)\]\W\[$(tput sgr0)\]\[$(tput sgr0)\] \$ "
 
@@ -151,38 +146,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-
-# check windows size if windows is resized
-shopt -s checkwinsize
-
-# autocorrect directory if mispelled
-shopt -s dirspell direxpand
-
-# auto cd if only the directory name is given
-shopt -s autocd
-
-#use extra globing features. See man bash, search extglob.
-shopt -s extglob
-
-#include .files when globbing.
-shopt -s dotglob
-
-# Do not exit an interactive shell upon reading EOF.
-set -o ignoreeof;
-
-# Check the hash table for a command name before searching $PATH.
-shopt -s checkhash
-
-# Enable `**` pattern in filename expansion to match all files,
-# directories and subdirectories.
-shopt -s globstar
-
-# Do not attempt completions on an empty line.
-shopt -s no_empty_cmd_completion
-
-# Case-insensitive filename matching in filename expansion.
-shopt -s nocaseglob
-
 
 # brew install jump
 # https://github.com/gsamokovarov/jump
