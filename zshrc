@@ -28,6 +28,8 @@ alias hc='hub compare'
 alias -s go='go run'
 alias hs='hugo server'
 
+alias sshs="~/ssh-manager.sh"
+
 # =============
 #    EXPORT
 # =============
