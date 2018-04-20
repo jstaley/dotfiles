@@ -1,25 +1,11 @@
 " I use the same vimrc for both nvim and vim
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'SirVer/ultisnips'
-Plug 'cespare/vim-toml'
-Plug 'corylanou/vim-present', {'for' : 'present'}
-Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
-Plug 'fatih/vim-hclfmt'
-Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
 Plug 'godlygeek/tabular'
 Plug 'hashivim/vim-hashicorp-tools'
-Plug 'mileszs/ack.vim'
 Plug 'plasticboy/vim-markdown'
-Plug 't9md/vim-choosewin'
 Plug 'tomasr/molokai'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-scriptease'
 
 call plug#end()
 
@@ -149,15 +135,6 @@ function! StatusLinePercent()
   return (100 * line('.') / line('$')) . '%'
 endfunction
 
-function! StatusLineLeftInfo()
- let branch = fugitive#head()
- let filename = '' != expand('%:t') ? expand('%:t') : '[No Name]'
- if branch !=# ''
-   return printf("%s | %s", branch, filename)
- endif
- return filename
-endfunction
-
 exe 'hi! myInfoColor ctermbg=240 ctermfg=252'
 
 " start building our statusline
@@ -170,7 +147,6 @@ set statusline+=%*
 
 " left information bar (after mode)
 set statusline+=%#myInfoColor#
-set statusline+=\ %{StatusLineLeftInfo()}
 set statusline+=\ %*
 
 " right section seperator
