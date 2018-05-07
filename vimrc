@@ -5,7 +5,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'godlygeek/tabular'
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'plasticboy/vim-markdown'
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 
 call plug#end()
 
@@ -62,9 +62,9 @@ endif
 syntax enable
 set t_Co=256
 set background=dark
-let g:molokai_original = 1
+" let g:molokai_original = 1
 let g:rehash256 = 1
-colorscheme molokai
+" colorscheme molokai
 
 augroup filetypedetect
   command! -nargs=* -complete=help Help vertical belowright help <args>

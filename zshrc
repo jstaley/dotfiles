@@ -33,6 +33,7 @@ alias sshs="~/ssh-manager.sh"
 # =============
 #    EXPORT
 # =============
+export PATH=$HOME/bin:$PATH
 export EDITOR="vim"
 export LSCOLORS=cxBxhxDxfxhxhxhxhxcxcx
 export CLICOLOR=1
@@ -206,18 +207,11 @@ typeset -U path PATH cdpath CDPATH fpath FPATH manpath MANPATH
 # ===================
 
 # brew install zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # brew install zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ===================
 #    THIRD PARTY
 # ===================
-# brew install jump
-# https://github.com/gsamokovarov/jump
-eval "$(jump shell)"
-
-# brew install direnv
-# https://github.com/direnv/direnv
-eval "$(direnv hook zsh)"

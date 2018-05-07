@@ -6,6 +6,11 @@
 #
 ###############
 
+if [ -t 1 ]; then
+  # Start zsh
+  exec zsh
+fi
+
 # Source other files
 
 # Senstive functions which are not pushed to Github
